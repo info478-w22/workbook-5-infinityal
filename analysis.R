@@ -26,4 +26,4 @@ nhanes_survey <- svydesign(
 
 nhanes_mean <- svymean(~alq151, nhanes_survey,na.rm = TRUE)
 
-gender_mean_by <- svyby(~alq151, ~riagendr, nhanes_survey,svymean)
+gender_mean_by <- svyby(~alq151, ~riagendr, nhanes_survey,svymean, na.rm = TRUE)
